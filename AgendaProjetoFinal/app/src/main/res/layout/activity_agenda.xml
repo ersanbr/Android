@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Agenda"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edtCompromissoTipo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="Insira o Tipo do Compromisso"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edtCompromissoComplmento"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="Complemento Compromisso"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edtCompromissoHora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="Hora do Compromisso"
+            android:inputType="time"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#000"
+            android:onClick="btnGravarClick"
+            android:text="Editar"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnGravar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#000"
+            android:onClick="btnGravarClick"
+            android:layout_marginLeft="2dp"
+            android:text="Gravar"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnApagar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#000"
+            android:onClick="btnGravarClick"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:text="Apagar"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#000"
+            android:onClick="btnGravarClick"
+            android:text="Email"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+</LinearLayout>
