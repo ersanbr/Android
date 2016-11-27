@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipoCompromissos_array">
+        <item>Aniversário</item>
+        <item>Dentista</item>
+        <item>Exame</item>
+        <item>Médico</item>
+        <item>Reunião</item>
+        <item>Telefonar</item>
+        <item>Viagem</item>
+        <item>Outro</item>
+    </string-array>
+</resources>
