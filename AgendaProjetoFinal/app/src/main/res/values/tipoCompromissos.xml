@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="tipoCompromissos_array">
+        <item>Escolha um tipo</item>
         <item>Aniversário</item>
         <item>Dentista</item>
         <item>Exame</item>

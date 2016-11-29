@@ -1,7 +1,9 @@
 package com.example.ersan.agenda.dal;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.ersan.agenda.model.Compromisso;
 
@@ -18,19 +20,21 @@ import java.util.ListIterator;
 public class CompromissosDal {
     private static List<Compromisso> listaCompromissos = new ArrayList<Compromisso>();
 
-        public static void adiconaCompromisso(Compromisso c){
-            listaCompromissos.add(c);
+        public static void adicionaCompromisso(Context context, Compromisso c){
+//            listaCompromissos.add(c);
+            Banco banco = new Banco(context);
+            long id = banco.inserirCompromisso(c);
+            Toast.makeText(context, "Id: " + id, Toast.LENGTH_LONG).show();
             Log.v("Registros", listaCompromissos.size() + "");
         }
 
-        public static List<Compromisso> listarCompromissos(){
-//            List<String> compromissosString = new ArrayList<String>();
-//
-//            for (Compromisso c: listaCompromissos){
-//                compromissosString.add(c.getTipo());
-//            }
-//            // retorna apenas o tipo do compromisso
-            return listaCompromissos;
+        public static List<Compromisso> listarCompromissos(Context context){
+            Banco banco = new Banco(context);
+            if (banco.retornarCompromissos()!=null){
+                return banco.retornarCompromissos();
+            }
+
+            return null;
 
         }
 

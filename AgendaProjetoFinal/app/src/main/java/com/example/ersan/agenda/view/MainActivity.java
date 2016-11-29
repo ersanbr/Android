@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         lstCompromissos = (ListView) findViewById(R.id.lstCompromissos);
-        arrayAdapterCompromissos = new ArrayAdapterCompromissos(this, CompromissosDal.listarCompromissos());
+        arrayAdapterCompromissos = new ArrayAdapterCompromissos(this, CompromissosDal.listarCompromissos(this));
         lstCompromissos.setAdapter(arrayAdapterCompromissos);
 
 

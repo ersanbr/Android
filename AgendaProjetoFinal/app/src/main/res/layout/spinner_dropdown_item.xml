@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</CheckedTextView>
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:ellipsize="start"
+    android:layout_gravity="center"/>
