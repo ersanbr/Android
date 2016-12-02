@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CadastraClienteActivity extends AppCompatActivity {
 
@@ -25,12 +26,16 @@ public class CadastraClienteActivity extends AppCompatActivity {
         btnGravar = (Button) findViewById(R.id.btnGravar);
 
 
-        c.setNome(edtNome.getText().toString());
-        c.setRg(edtCPF.getText().toString());
-        c.setCpf(edtRG.getText().toString());
-        a.setCliente(c);
     }
-    public void clickGravar(View view) {
+    public void clickGravarCliente(View view) {
+        c.setNome(edtNome.getText().toString());
+        c.setRg(edtRG.getText().toString());
+        c.setCpf(edtCPF.getText().toString());
+        a.setCliente(c);
+
         a.execute();
+        Toast.makeText(this, "Cliente cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+        finish();
+
     }
 }

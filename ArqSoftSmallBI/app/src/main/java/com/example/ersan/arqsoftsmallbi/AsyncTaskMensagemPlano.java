@@ -9,10 +9,6 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
-/**
- * Created by ersan on 29/11/16.
- */
-
 public class AsyncTaskMensagemPlano extends AsyncTask<String, String, String> {
 
 
@@ -30,7 +26,7 @@ public class AsyncTaskMensagemPlano extends AsyncTask<String, String, String> {
 
 
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppostreq = new HttpPost("http://noterh:8081/SmallBI/rest/smallbi/planos/create");
+            HttpPost httppostreq = new HttpPost("http://smallbi.jelasticlw.com.br/rest/smallbi/planos/create");
 
             StringEntity se = new StringEntity(jsonobj.toString());
             se.setContentType("application/json;charset=UTF-8");

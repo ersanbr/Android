@@ -14,7 +14,6 @@ public class AsyncTaskMensagemCliente extends AsyncTask<String, String, String> 
 
     private Cliente cliente;
 
-
 	@Override
 	protected String doInBackground(String... params) {
 		try {
@@ -27,7 +26,7 @@ public class AsyncTaskMensagemCliente extends AsyncTask<String, String, String> 
 
 
 			HttpClient httpclient = new DefaultHttpClient();
-			HttpPost httppostreq = new HttpPost("http://noterh:8081/SmallBI/rest/smallbi/clientes/create");
+			HttpPost httppostreq = new HttpPost("http://smallbi.jelasticlw.com.br/rest/smallbi/clientes/create");
 
 			StringEntity se = new StringEntity(jsonobj.toString());
 			se.setContentType("application/json;charset=UTF-8");
