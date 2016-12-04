@@ -17,6 +17,14 @@
         </activity>
         <activity android:name=".view.AgendaActivity" />
         <activity android:name=".view.ListaCompromissosActivity"></activity>
+        <receiver android:name=".view.BroadcastReceiverAux" android:label="BroadcastReceiverAux">
+            <intent-filter>
+                <action android:name="ALARME_DISPARADO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+<!--        <service android:name=".service.AgendaAquiAgoraService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>-->
     </application>
 
 </manifest>

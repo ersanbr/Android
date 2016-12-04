@@ -15,5 +15,6 @@ public final class Contrato {
         public static final String NOME_DA_COLUNA_TIPO = "CompromissoTipo";
         public static final String NOME_DA_COLUNA_DESCRICAO = "CompromissoDescricao";
         public static final String NOME_DA_COLUNA_HORA = "CompromissoHora";
+        public static final String NOME_DA_COLUNA_DATA = "CompromissoData";
     }
 }

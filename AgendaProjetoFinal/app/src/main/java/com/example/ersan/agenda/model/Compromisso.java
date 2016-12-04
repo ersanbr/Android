@@ -10,6 +10,13 @@ public class Compromisso {
     private String Tipo;
     private String Complemento;
     private String hora;
+    private String data;
+
+    public String getData() { return data; }
+
+    public void setData(String data) {
+        this.data = data;
+    }
 
     public String getTipo() {
         return Tipo;

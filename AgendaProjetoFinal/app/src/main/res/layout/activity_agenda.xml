@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
@@ -68,18 +69,79 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
+
+<!--        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:hint="00"
+            android:inputType="time"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text=":"
+            android:inputType="time"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:hint="00"
+            android:inputType="time"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"/>-->
 
         <EditText
             android:id="@+id/edtCompromissoHora"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center_vertical"
             android:hint="Hora do Compromisso"
             android:inputType="time"
             android:textAlignment="center"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
+
+<!--        <com.github.pinball83.maskededittext.MaskedEditText
+            android:id="@+id/edtCompromissoHora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:hint="00:00"
+            android:inputType="time"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"/>-->
+
+        <EditText
+            android:id="@+id/edtCompromissoData"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="00/00/00"
+            android:inputType="date"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -95,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:background="#000"
-            android:onClick="btnGravarClick"
+            android:onClick="btnEditarClick"
             android:text="Editar"
             android:textAlignment="center"
             android:textColor="#fff"
@@ -121,13 +183,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:background="#000"
-            android:onClick="btnGravarClick"
+            android:onClick="btnApagarClick"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:text="Apagar"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/btnEmail"
@@ -135,7 +198,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:background="#000"
-            android:onClick="btnGravarClick"
+            android:onClick="btnEmailClick"
             android:text="Email"
             android:textAlignment="center"
             android:textColor="#fff"
