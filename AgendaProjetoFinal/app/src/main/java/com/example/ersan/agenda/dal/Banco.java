@@ -10,7 +10,11 @@ import android.util.Log;
 
 import com.example.ersan.agenda.model.Compromisso;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Banco extends SQLiteOpenHelper {
@@ -131,7 +135,17 @@ public class Banco extends SQLiteOpenHelper {
                 com.setTipo(cursor.getString(1));
                 com.setComplemento(cursor.getString(2));
                 com.setHora(cursor.getString(3));
-                com.setData(cursor.getString(4));
+                DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
+                DateFormat outputFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String inputDateStr = cursor.getString(4);
+                Date date = new Date();
+                try {
+                    date = inputFormat.parse(inputDateStr);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                String outputDateStr = outputFormat.format(date);
+                com.setData(outputDateStr);
                 compromissos.add(com);
 //                Log.v("Compromisso: ", com.getComplemento() + " Id: " + String.valueOf(com.getId()) +
 //                " Data: " + com.getData());

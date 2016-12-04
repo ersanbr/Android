@@ -92,38 +92,55 @@ public class MainActivity extends AppCompatActivity {
 
     private void inicializarCompromissos(){
         Compromisso com = new Compromisso();
+
+        com.setTipo("Médico");
+        com.setComplemento("Consulta no médico2");
+        com.setHora("09:30");
+        com.setData("2017-01-02");
+
+        CompromissosDal.adicionaCompromisso(this, com);
+
         com.setTipo("Dentista");
         com.setComplemento("Consulta no dentista");
         com.setHora("09:00");
-        com.setData("03/12/2016");
+        com.setData("2016-12-03");
 
         CompromissosDal.adicionaCompromisso(this, com);
+
+
+        com.setTipo("Dentista");
+        com.setComplemento("Tratamento de Canal");
+        com.setHora("08:30");
+        com.setData("2016-11-02");
+
+        CompromissosDal.adicionaCompromisso(this, com);
+
 
         com.setTipo("Telefonar");
         com.setComplemento("Ligar para Matriz");
         com.setHora("08:30");
-        com.setData("02/12/2016");
+        com.setData("2016-12-02");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
         com.setTipo("Médico");
         com.setComplemento("Consulta no médico");
         com.setHora("09:30");
-        com.setData("02/12/2016");
+        com.setData("2016-12-02");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
         com.setTipo("Reuniao");
         com.setComplemento("Reunião Venda");
         com.setHora("10:30");
-        com.setData("01/12/2016");
+        com.setData("2016-12-01");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
         com.setTipo("Aniversário");
         com.setComplemento("Niver João");
         com.setHora("10:30");
-        com.setData("11/12/2016");
+        com.setData("2016-12-11");
 
         CompromissosDal.adicionaCompromisso(this, com);
     }

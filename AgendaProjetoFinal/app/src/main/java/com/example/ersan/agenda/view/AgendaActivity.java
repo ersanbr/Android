@@ -23,6 +23,7 @@ import com.example.ersan.agenda.dal.CompromissosDal;
 import com.example.ersan.agenda.model.Compromisso;
 import com.example.ersan.agenda.notification.Notification;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -92,13 +93,33 @@ public class AgendaActivity extends AppCompatActivity {
                         if(horaValida == true) {
                             if(dataValida == true) {
                                 if (edicao == false) {
-                                    com.setData(edtCompromissoData.getText().toString());
+                                    DateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+                                    DateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+                                    String inputDateStr = edtCompromissoData.getText().toString();
+                                    Date date = new Date();
+                                    try {
+                                        date = inputFormat.parse(inputDateStr);
+                                    } catch (ParseException e) {
+                                        e.printStackTrace();
+                                    }
+                                    String outputDateStr = outputFormat.format(date);
+                                    com.setData(outputDateStr);
                                     com.setTipo(spnTipoCompromisso.getSelectedItem().toString());
                                     com.setComplemento(edtCompromissoComplmento.getText().toString());
                                     com.setHora(edtCompromissoHora.getText().toString());
                                     CompromissosDal.adicionaCompromisso(AgendaActivity.this, com);
                                 } else {
-                                    com.setData(edtCompromissoData.getText().toString());
+                                    DateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+                                    DateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+                                    String inputDateStr = edtCompromissoData.getText().toString();
+                                    Date date = null;
+                                    try {
+                                        date = inputFormat.parse(inputDateStr);
+                                    } catch (ParseException e) {
+                                        e.printStackTrace();
+                                    }
+                                    String outputDateStr = outputFormat.format(date);
+                                    com.setData(outputDateStr);
                                     com.setTipo(spnTipoCompromisso.getSelectedItem().toString());
                                     com.setComplemento(edtCompromissoComplmento.getText().toString());
                                     com.setHora(edtCompromissoHora.getText().toString());
