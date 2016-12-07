@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="340dp"
+        android:layout_height="66dp"
+        android:layout_x="10dp"
+        android:layout_y="80dp"
+        android:textSize="55sp"
+        android:background="#dddddd" />
+
+    <Button
+        android:text="0"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="98dp"
+        android:layout_y="455dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn0Click"
+        android:id="@+id/btn0" />
+
+    <Button
+        android:text="1"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="10dp"
+        android:layout_y="385dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn1Click"
+        android:id="@+id/btn1" />
+
+    <Button
+        android:text="2"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="98dp"
+        android:layout_y="385dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn2Click"
+        android:id="@+id/btn2" />
+
+    <Button
+        android:text="3"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="186dp"
+        android:layout_y="385dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn3Click"
+        android:id="@+id/btn3" />
+
+    <Button
+        android:text="4"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="10dp"
+        android:layout_y="315dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn4Click"
+        android:id="@+id/btn4"/>
+
+    <Button
+        android:text="5"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="98dp"
+        android:layout_y="315dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn5Click"
+        android:id="@+id/btn5"/>
+
+    <Button
+        android:text="6"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="186dp"
+        android:layout_y="315dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn6Click"
+        android:id="@+id/btn6"/>
+
+    <Button
+        android:text="7"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="10dp"
+        android:layout_y="245dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn7Click"
+        android:id="@+id/btn7"/>
+
+    <Button
+        android:text="8"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="98dp"
+        android:layout_y="245dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn8Click"
+        android:id="@+id/btn8"/>
+
+    <Button
+        android:text="9"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="186dp"
+        android:layout_y="245dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btn9Click"
+        android:id="@+id/btn9"/>
+
+    <Button
+        android:text="="
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="186dp"
+        android:layout_y="455dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btnIgualClick"
+        android:id="@+id/btnIgual"/>
+
+    <Button
+        android:text="+"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="275dp"
+        android:layout_y="455dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btnAdicaoClick"
+        android:id="@+id/btnAdicionar"/>
+
+    <Button
+        android:text="/"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="275dp"
+        android:layout_y="245dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btnDivisaoClick"
+        android:id="@+id/btnDividir"/>
+
+    <Button
+        android:text="."
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="10dp"
+        android:layout_y="455dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btnPontoClick"
+        android:id="@+id/btnPonto"/>
+
+    <Button
+        android:text="*"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="275dp"
+        android:layout_y="315dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btnMultiplicacaoClick"
+        android:id="@+id/btnMultiplicar" />
+
+    <Button
+        android:text="-"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="275dp"
+        android:layout_y="385dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:onClick="btnSubtracaoClick"
+        android:id="@+id/btnSubtrair" />
+
+    <Button
+        android:text="C"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="186dp"
+        android:layout_y="175dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:onClick="btnCClick"
+        android:id="@+id/btnC"/>
+
+    <Button
+        android:text="Del"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_x="275dp"
+        android:layout_y="175dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:onClick="btnApagarClick"
+        android:id="@+id/btnApagar"/>
+
+
+</AbsoluteLayout>
