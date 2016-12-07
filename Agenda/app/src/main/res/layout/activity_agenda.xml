@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:text="Agenda"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:hint="Insira o Tipo do Compromisso"
+            android:textAlignment="center"
+            android:id="@+id/edtCompromissoTipo"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:hint="Complemento Compromisso"
+            android:textAlignment="center"
+            android:id="@+id/edtCompromissoComplmento"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:inputType="time"
+            android:hint="Hora do Compromisso"
+            android:textAlignment="center"
+            android:id="@+id/edtCompromissoHora"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnGravar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:onClick="btnGravarClick"
+            android:text="Grava compromisso"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+    </LinearLayout>
+</LinearLayout>
