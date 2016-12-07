@@ -26,7 +26,7 @@ public class AsyncTaskMensagemPlano extends AsyncTask<String, String, String> {
 
 
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppostreq = new HttpPost("http://smallbi.jelasticlw.com.br/rest/smallbi/planos/create");
+            HttpPost httppostreq = new HttpPost("http://smallbi.whelastic.net/rest/smallbi/planos/create");
 
             StringEntity se = new StringEntity(jsonobj.toString());
             se.setContentType("application/json;charset=UTF-8");

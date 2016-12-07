@@ -22,7 +22,7 @@ public class ArrayAdapterCompromissos extends ArrayAdapter{
 
     Context context;
     List<Compromisso> compromissos;
-    TextView txtTipo, txtHora, txtComplemento, txtId, txtData;
+    TextView txtTipo, txtHora, txtHoraFim, txtComplemento, txtId, txtData;
 
     public ArrayAdapterCompromissos(Context context, List<Compromisso> compromissos){
         //Necessário devido a extensão ArrayAdapter
@@ -48,12 +48,14 @@ public class ArrayAdapterCompromissos extends ArrayAdapter{
         txtId = (TextView) convertView.findViewById(R.id.txtIdCompromisso);
         txtTipo = (TextView) convertView.findViewById(R.id.txtTipo);
         txtHora = (TextView) convertView.findViewById(R.id.txtHora);
+        txtHoraFim = (TextView) convertView.findViewById(R.id.txtHoraFim);
         txtComplemento = (TextView) convertView.findViewById(R.id.txtComplemento);
 
         txtData.setText(compromisso.getData());
         txtId.setText(String.valueOf(compromisso.getId()));
         txtTipo.setText(compromisso.getTipo());
         txtHora.setText(compromisso.getHora());
+        txtHoraFim.setText(compromisso.getHoraFim());
         txtComplemento.setText(compromisso.getComplemento());
 
         convertView.setOnClickListener(new View.OnClickListener(){
@@ -71,6 +73,7 @@ public class ArrayAdapterCompromissos extends ArrayAdapter{
                 intent.putExtra("CompromissoTipo", compromisso.getTipo());
                 intent.putExtra("CompromissoComplmento",compromisso.getComplemento());
                 intent.putExtra("CompromissoHora", compromisso.getHora());
+                intent.putExtra("CompromissoHoraFim",compromisso.getHoraFim());
 //                Intent intent = new Intent(context, AgendaActivity.class);
 //                intent.putExtra("CompromissoId", txtId.getText());
 //                intent.putExtra("CompromissoTipo", txtTipo.getText());

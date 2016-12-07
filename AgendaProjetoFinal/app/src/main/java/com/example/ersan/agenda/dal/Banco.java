@@ -20,7 +20,7 @@ import java.util.List;
 public class Banco extends SQLiteOpenHelper {
 
     public static final String NOME_DO_BANCO = "AgendaDb.db";
-    public static final int VERSAO_DO_BANCO = 1;
+    public static final int VERSAO_DO_BANCO = 2;
 
     public static final String TIPO_TEXTO = " TEXT";
     public static final String TIPO_INTEIRO = " INTEGER";
@@ -33,7 +33,8 @@ public class Banco extends SQLiteOpenHelper {
             Contrato.TabelaCompromisso.NOME_DA_COLUNA_TIPO + TIPO_TEXTO + VIRGULA +
             Contrato.TabelaCompromisso.NOME_DA_COLUNA_DESCRICAO + TIPO_TEXTO + VIRGULA +
             Contrato.TabelaCompromisso.NOME_DA_COLUNA_DATA + TIPO_TEXTO + VIRGULA +
-            Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA + TIPO_TEXTO  + " );";
+            Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA + TIPO_TEXTO + VIRGULA +
+            Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA_FIM + TIPO_TEXTO + " );";
 
 
 
@@ -66,6 +67,7 @@ public class Banco extends SQLiteOpenHelper {
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_TIPO,c.getTipo());
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_DESCRICAO,c.getComplemento());
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA,c.getHora());
+        registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA_FIM,c.getHoraFim());
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_DATA,c.getData());
 //        Log.v("Valores", c.getTipo());
 //        Log.v("Valores", c.getComplemento());
@@ -81,6 +83,7 @@ public class Banco extends SQLiteOpenHelper {
         ContentValues registro = new ContentValues();
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_DESCRICAO, newCom.getComplemento().toString());
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA, newCom.getHora().toString());
+        registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA_FIM, newCom.getHoraFim().toString());
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_TIPO, newCom.getTipo().toString());
         registro.put(Contrato.TabelaCompromisso.NOME_DA_COLUNA_DATA, newCom.getData().toString());
 
@@ -104,7 +107,8 @@ public class Banco extends SQLiteOpenHelper {
             Contrato.TabelaCompromisso.NOME_DA_COLUNA_TIPO,
             Contrato.TabelaCompromisso.NOME_DA_COLUNA_DESCRICAO,
             Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA,
-            Contrato.TabelaCompromisso.NOME_DA_COLUNA_DATA
+            Contrato.TabelaCompromisso.NOME_DA_COLUNA_DATA,
+            Contrato.TabelaCompromisso.NOME_DA_COLUNA_HORA_FIM
         };
 
         /*
@@ -138,6 +142,7 @@ public class Banco extends SQLiteOpenHelper {
                 DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
                 DateFormat outputFormat = new SimpleDateFormat("dd/MM/yyyy");
                 String inputDateStr = cursor.getString(4);
+                com.setHoraFim(cursor.getString(5));
                 Date date = new Date();
                 try {
                     date = inputFormat.parse(inputDateStr);

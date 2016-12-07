@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnCadastrar = (Button) findViewById(R .id.btnCadastrar);
         lstCompromissos = (ListView) findViewById(R.id.lstCompromissos);
 
-        inicializarCompromissos();
+        //inicializarCompromissos();
         List<Compromisso> compromissos = CompromissosDal.listarCompromissos(this);
 
         if(compromissos != null && compromissos.size() != 0 ){
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void inicializarCompromissos(){
+    /*private void inicializarCompromissos(){
         Compromisso com = new Compromisso();
 
         com.setTipo("Médico");
@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         com.setComplemento("Consulta no dentista");
         com.setHora("09:00");
         com.setData("2016-12-03");
+        com.setHoraFim("10:00");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
@@ -112,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         com.setComplemento("Tratamento de Canal");
         com.setHora("08:30");
         com.setData("2016-11-02");
+        com.setHoraFim("10:00");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
@@ -120,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         com.setComplemento("Ligar para Matriz");
         com.setHora("08:30");
         com.setData("2016-12-02");
+        com.setHoraFim("10:00");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
@@ -127,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         com.setComplemento("Consulta no médico");
         com.setHora("09:30");
         com.setData("2016-12-02");
+        com.setHoraFim("10:00");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
@@ -134,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         com.setComplemento("Reunião Venda");
         com.setHora("10:30");
         com.setData("2016-12-01");
+        com.setHoraFim("10:50");
 
         CompromissosDal.adicionaCompromisso(this, com);
 
@@ -141,9 +146,10 @@ public class MainActivity extends AppCompatActivity {
         com.setComplemento("Niver João");
         com.setHora("10:30");
         com.setData("2016-12-11");
+        com.setHoraFim("11:00");
 
         CompromissosDal.adicionaCompromisso(this, com);
-    }
+    }*/
 
     public void btnCadastrarClick(View view) {
         Intent cadastrar = new Intent(MainActivity.this, AgendaActivity.class);

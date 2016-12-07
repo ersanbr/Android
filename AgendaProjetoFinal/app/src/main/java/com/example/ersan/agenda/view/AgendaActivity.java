@@ -31,7 +31,7 @@ import java.util.List;
 
 public class AgendaActivity extends AppCompatActivity {
 
-    EditText edtCompromissoComplmento, edtCompromissoHora, edtCompromissoData;
+    EditText edtCompromissoComplmento, edtCompromissoHora, edtCompromissoHoraFim, edtCompromissoData;
     Button btnGravar, btnEditar, btnEmail, btnApagar;
     Spinner spnTipoCompromisso;
     String idCompromisso;
@@ -45,6 +45,7 @@ public class AgendaActivity extends AppCompatActivity {
         edtCompromissoData = (EditText) findViewById(R.id.edtCompromissoData);
         edtCompromissoComplmento = (EditText) findViewById(R.id.edtCompromissoComplmento);
         edtCompromissoHora = (EditText) findViewById(R.id.edtCompromissoHora);
+        edtCompromissoHoraFim = (EditText) findViewById(R.id.edtCompromissoHoraFim);
         spnTipoCompromisso = (Spinner) findViewById(R.id.spnTipoCompromisso);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipoCompromissos_array,
@@ -62,6 +63,7 @@ public class AgendaActivity extends AppCompatActivity {
         String tipo = getIntent().getStringExtra("CompromissoTipo");
         String complemento = getIntent().getStringExtra("CompromissoComplmento");
         String hora = getIntent().getStringExtra("CompromissoHora");
+        String horaFim = getIntent().getStringExtra("CompromissoHoraFim");
 
         if (tipo != null && complemento != null && hora != null && data != null){
             edtCompromissoData.setText(data);
@@ -70,6 +72,8 @@ public class AgendaActivity extends AppCompatActivity {
             spnTipoCompromisso.setEnabled(false);
             edtCompromissoHora.setText(hora);
             edtCompromissoHora.setEnabled(false);
+            edtCompromissoHoraFim.setText(horaFim);
+            edtCompromissoHoraFim.setEnabled(false);
             edtCompromissoComplmento.setText(complemento);
             edtCompromissoComplmento.setEnabled(false);
             btnEditar.setVisibility(View.VISIBLE);
@@ -107,6 +111,7 @@ public class AgendaActivity extends AppCompatActivity {
                                     com.setTipo(spnTipoCompromisso.getSelectedItem().toString());
                                     com.setComplemento(edtCompromissoComplmento.getText().toString());
                                     com.setHora(edtCompromissoHora.getText().toString());
+                                    com.setHoraFim(edtCompromissoHoraFim.getText().toString());
                                     CompromissosDal.adicionaCompromisso(AgendaActivity.this, com);
                                 } else {
                                     DateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -123,6 +128,7 @@ public class AgendaActivity extends AppCompatActivity {
                                     com.setTipo(spnTipoCompromisso.getSelectedItem().toString());
                                     com.setComplemento(edtCompromissoComplmento.getText().toString());
                                     com.setHora(edtCompromissoHora.getText().toString());
+                                    com.setHoraFim(edtCompromissoHoraFim.getText().toString());
                                     com.setId(Integer.parseInt(idCompromisso));
 
                                     List<Compromisso> compromissos = CompromissosDal.listarCompromissos(AgendaActivity.this);
@@ -202,7 +208,8 @@ public class AgendaActivity extends AppCompatActivity {
 
         String conteudo = "Compromisso: " + edtCompromissoComplmento.getText().toString() +
                 "\n Tipo: " + spnTipoCompromisso.getSelectedItem().toString() +
-                "\n Hora: " + edtCompromissoHora.getText().toString();
+                "\n Hora: " + edtCompromissoHora.getText().toString() +
+                "\n Hora Fim: " + edtCompromissoHoraFim.getText().toString();
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setType("text/plain");
@@ -216,6 +223,7 @@ public class AgendaActivity extends AppCompatActivity {
     public void btnEditarClick(View view) {
         spnTipoCompromisso.setEnabled(true);
         edtCompromissoHora.setEnabled(true);
+        edtCompromissoHoraFim.setEnabled(true);
         edtCompromissoComplmento.setEnabled(true);
         edtCompromissoData.setEnabled(true);
         edicao = true;

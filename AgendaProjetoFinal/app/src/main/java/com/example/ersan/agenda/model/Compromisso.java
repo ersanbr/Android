@@ -10,6 +10,7 @@ public class Compromisso {
     private String Tipo;
     private String Complemento;
     private String hora;
+    private String horaFim;
     private String data;
 
     public String getData() { return data; }
@@ -48,5 +49,13 @@ public class Compromisso {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getHoraFim() {
+        return horaFim;
+    }
+
+    public void setHoraFim(String horaFim) {
+        this.horaFim = horaFim;
     }
 }

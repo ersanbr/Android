@@ -69,64 +69,41 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-<!--        <EditText
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center_vertical"
-            android:hint="00"
-            android:inputType="time"
-            android:textAlignment="center"
-            android:textSize="35sp"
-            android:textStyle="bold" />
 
         <EditText
-            android:layout_width="0dp"
+            android:id="@+id/edtCompromissoHora"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text=":"
+            android:hint="Hora Inicio"
             android:inputType="time"
             android:textAlignment="center"
             android:textSize="35sp"
             android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center_vertical"
-            android:hint="00"
-            android:inputType="time"
-            android:textAlignment="center"
-            android:textSize="35sp"
-            android:textStyle="bold"/>-->
-
-        <EditText
-            android:id="@+id/edtCompromissoHora"
+            android:id="@+id/edtCompromissoHoraFim"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:hint="Hora do Compromisso"
+            android:hint="Hora Fim"
             android:inputType="time"
             android:textAlignment="center"
             android:textSize="35sp"
             android:textStyle="bold"/>
 
-<!--        <com.github.pinball83.maskededittext.MaskedEditText
-            android:id="@+id/edtCompromissoHora"
+    </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center_vertical"
-            android:hint="00:00"
-            android:inputType="time"
-            android:textAlignment="center"
-            android:textSize="35sp"
-            android:textStyle="bold"/>-->
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
         <EditText
             android:id="@+id/edtCompromissoData"

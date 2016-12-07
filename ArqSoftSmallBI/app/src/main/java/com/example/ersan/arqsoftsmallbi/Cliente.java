@@ -14,6 +14,8 @@ public class Cliente {
     private String nome;
     private String rg;
     private String cpf;
+    private String telefone;
+
 
 
     public int getId() {
@@ -47,4 +49,14 @@ public class Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+
 }

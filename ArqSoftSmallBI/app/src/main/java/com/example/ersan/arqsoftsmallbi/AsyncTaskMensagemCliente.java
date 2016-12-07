@@ -23,10 +23,11 @@ public class AsyncTaskMensagemCliente extends AsyncTask<String, String, String> 
             jsonobj.put("nome", cliente.getNome());
             jsonobj.put("rg", cliente.getRg());
             jsonobj.put("cpf", cliente.getCpf());
+			jsonobj.put("telefone",cliente.getTelefone());
 
 
 			HttpClient httpclient = new DefaultHttpClient();
-			HttpPost httppostreq = new HttpPost("http://smallbi.jelasticlw.com.br/rest/smallbi/clientes/create");
+			HttpPost httppostreq = new HttpPost("http://smallbi.whelastic.net/rest/smallbi/clientes/create");
 
 			StringEntity se = new StringEntity(jsonobj.toString());
 			se.setContentType("application/json;charset=UTF-8");
