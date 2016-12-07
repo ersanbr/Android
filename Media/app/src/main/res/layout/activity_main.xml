@@ -1,0 +1,63 @@
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="20dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="Calcular média de dois valores inteiros!"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="120dp"
+        android:textSize="20sp"
+        android:text="Digite o primeiro número:"/>
+
+    <EditText
+        android:id="@+id/edtNumber1"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:layout_x="40dp"
+        android:layout_y="160dp"
+        android:textSize="20sp"
+        android:background="#dddddd"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="230dp"
+        android:textSize="20sp"
+        android:text="Digite o segundo número"/>
+
+    <EditText
+        android:id="@+id/edtNumber2"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:layout_x="40dp"
+        android:layout_y="270dp"
+        android:textSize="20sp"
+        android:background="#dddddd"/>
+    
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_x="65dp"
+        android:layout_y="340dp"
+        android:text="Calcular"
+        android:background="#dddddd"
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="btnCalculateClick" />
+
+</AbsoluteLayout>
